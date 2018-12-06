@@ -1,0 +1,655 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    width: 100%;
+}
+
+h1 {
+    font-size: 3.2rem;
+}
+
+h2 {
+    font-size: 2.4rem;
+}
+
+h3 {
+    font-size: 2rem;
+}
+
+h4 {
+    font-size: 1.6rem;
+}
+
+h5 {
+    font-size: 1.2rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+body {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 1.7;
+    letter-spacing: 1px;
+    background-color: #fff;
+    text-rendering: optimizeLegibility;
+}
+
+.parallax-header {
+    /* The image used 1250 x 800 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.0)), url(../../images/chessecake-1250x800.jpg);
+    /* Set a specific height */
+    min-height: 80rem;
+}
+
+.parallax-header2 {
+    /* The image used 1250 x 800 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(../../images/cheesecake2-1250x800.jpg);
+    /* Set a specific height */
+    min-height: 80rem;
+}
+
+.parallax-recipeHeader {
+    /* The image used 1250 x 800 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(../../images/resturant3.jpg);
+    /* Set a specific height */
+    min-height: 20rem;
+}
+
+.parallax-categoryHeader {
+    /* The image used 1250 x 800 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(../../images/category.jpg);
+    /* Set a specific height */
+    min-height: 20rem;
+}
+
+.parallax {
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+}
+
+.parallax2 {
+    /* Create the parallax scrolling effect */
+    //background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: whitesmoke;
+    outline-color: rgb(238, 111, 52);
+    outline-width: 3px;
+    outline-style: solid;
+}
+
+.featured-slide {
+    width: 25vw;
+}
+
+div.divHeaderTitle h1 {
+    // font-family: 'Oxygen', sans-serif;
+    // font-family: 'Exo', sans-serif;
+    font-family: 'Amaranth', sans-serif;
+    font-size: 5rem;
+    padding-top: 5rem;
+}
+
+div.imageGallery {
+    border-width: 3px;
+    border-color: rgb(32, 31, 31);
+    border-style: solid;
+    border-radius: 2px;
+}
+
+.parallax-cards {
+    /* The image is a small image */
+    background-image: url(../../images/45-degree-fabric-light.png);
+    background-repeat: repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    padding-bottom: 50px;
+}
+
+.cardDim {
+    width: 270px;
+    min-height: 350px;
+}
+
+h2.theDir {
+    display: inline-block;
+    font-size: 1.2rem;
+    padding-top: 4px;
+}
+
+h2.theDir+p {
+    display: inline;
+}
+
+.app-image-gallery {
+    width: 30rem;
+}
+
+// Begging of slider ****************************
+.wrapper {
+    max-width: 1335px;
+    box-sizing: border-box;
+    padding: 0 20px;
+    margin: auto;
+}
+
+.wrapper a {
+    display: inline-block;
+    margin: 5px;
+}
+
+.wrapper a:first-child {
+    margin-left: 0;
+}
+
+.slider-wrapper {
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.slide {
+    height: 70vh;
+    background-size: cover !important;
+}
+
+.slide::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(0, 0, 0, 0.9)));
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+    bottom: 0;
+    left: 0;
+}
+
+.previousButton,
+.nextButton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background: url('../../images/leftRight.svg') no-repeat center center / 16px;
+    width: 40px;
+    height: 32px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.previousButton:hover,
+.nextButton:hover {
+    background: url('../../images/leftRight.svg') no-repeat center center / 16px;
+}
+
+.previousButton {
+    left: 0;
+    -webkit-transform: rotate(180deg) translateY(calc(50% + 0px));
+    -moz-transform: rotate(180deg) translateY(calc(50% + 0px));
+    -o-transform: rotate(180deg) translateY(calc(50% + 0px));
+    -ms-transform: rotate(180deg) translateY(calc(50% + 0px));
+    transform: rotate(180deg) translateY(calc(50% + 0px));
+}
+
+.previousButton:hover {
+    left: -10px;
+}
+
+.nextButton {
+    right: 0;
+}
+
+.nextButton:hover {
+    right: -10px;
+}
+
+.slider-content {
+    text-align: center;
+}
+
+.slider-content .inner {
+    padding: 0 70px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.slider-content .inner button {
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+}
+
+/* use margin-top to adjust vertical position of text  */
+
+.slider-content .inner h1 {
+    font-weight: 300;
+    margin: 0 auto;
+    max-width: 840px;
+    color: #FFFFFF;
+    font-size: 64px;
+    line-height: 1;
+    margin-top: 35rem;
+}
+
+.slider-content .inner p {
+    color: #FFFFFF;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    margin: 20px auto 30px;
+    max-width: 640px;
+}
+
+.slider-content section {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+}
+
+.slider-content section span {
+    color: whitesmoke;
+}
+
+.slider-content section span {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    display: inline-block;
+    text-align: left;
+    line-height: 1.4;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+.slider-content section img {
+    width: 40px;
+    height: 40px;
+    border: solid 2px rgba(255, 255, 255, 0.5);
+    border-radius: 100%;
+    vertical-align: middle;
+}
+
+.slider-content section span strong {
+    color: #FFFFFF;
+    font-size: 14px;
+    display: block;
+}
+
+@media (max-height: 500px) {
+    .slider-wrapper,
+    .slide {
+        height: calc(100vh - 75px);
+    }
+}
+
+@media (max-width: 640px) {
+    .slider-wrapper,
+    .slide {
+        height: calc(80vh - 75px);
+    }
+}
+
+@media (max-height: 600px) {
+    .slider-content .inner h1 {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 640px) {
+    .slider-content .inner h1 {
+        font-size: 32px;
+    }
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden
+}
+
+.slider a.previousButton,
+.slider a.nextButton {
+    font-size: 22px;
+    line-height: 0;
+    display: block;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    -ms-transition: all .3s linear;
+    -o-transition: all .3s linear;
+    transition: all .3s linear;
+    z-index: 1;
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+    /* prevent jump effect when scaling */
+}
+
+.slider a.previousButton:not(.disabled):hover,
+.slider a.nextButton:not(.disabled):hover {
+    -webkit-transform: translateY(-50%) scale(1.0);
+    transform: translateY(-50%) scale(1.0);
+    cursor: pointer;
+}
+
+.slider a.previousButton {
+    left: 20px;
+}
+
+.slider a.nextButton {
+    right: 20px;
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden
+}
+
+.slide.hidden {
+    visibility: hidden;
+}
+
+.slide.previous {
+    left: -100%;
+}
+
+.slide.current {
+    left: 0;
+}
+
+.slide.next {
+    left: 100%;
+}
+
+.slide.animateIn,
+.slide.animateOut {
+    -webkit-transition: all 2s ease;
+    transition: all 2s ease;
+}
+
+.slide.animateIn.previous,
+.slide.animateIn.next {
+    left: 0;
+    visibility: visible;
+}
+
+.slide.animateOut.previous {
+    left: 100%;
+}
+
+.slide.animateOut.next {
+    left: -100%;
+}
+
+.myNewSlider {
+    width: 850px;
+    margin: auto;
+    border-color: rgb(36, 35, 35);
+    border-width: 3px;
+    border-style: solid;
+    margin-top: 15px;
+}
+
+.divUl ul>li:nth-of-type(odd) {
+    background-color: rgb(221, 218, 218);
+}
+
+.divUl ul>li {
+    border-radius: 5px;
+    border: 1px solid black;
+    margin-top: 5px;
+    padding-left: 4px;
+}
+
+div.h2Directions h2 {
+    font-size: 2.3rem;
+}
+
+div.h2Directions p+p {
+    margin-top: 1rem;
+}
+
+.divBgRepeatArt {
+    /* The image used 1250 x 800 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0)), url(../../images/whitey.png);
+    /* Set a specific height */
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover; //color: whitesmoke;
+}
+
+.shadow {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.shadow:hover {
+    box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12);
+}
+
+.shadow-nohover {
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+    transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menuList {
+    font-size: 1.4rem;
+    font-family: 'Amaranth', sans-serif;
+    font-style: italic;
+    li {
+        margin-top: 3px;
+    }
+}
+
+//
+// Burger menu custom styles
+//
+.burger {
+    position: relative;
+    display: block;
+    width: 15rem;
+    margin: 0 auto 2rem;
+}
+
+.burger svg {
+    fill: #4e4a46;
+}
+
+.burger:hover svg {
+    fill: #c94e50;
+}
+
+.burger::after {
+    position: absolute;
+    top: 1.8rem;
+    left: 0;
+    right: 0;
+    color: #b4bad2;
+    content: 'R';
+    font-family: 'Righteous', sans-serif;
+    font-size: 4rem;
+    text-align: center;
+}
+
+main {
+    max-width: 46rem;
+    padding: 2rem 1rem;
+    margin: auto;
+}
+
+/* Position and sizing of burger button */
+
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+}
+
+/* Color/shape of burger icon bars */
+
+.bm-burger-bars {
+    background: #373a47;
+}
+
+/* Position and sizing of clickable cross button */
+
+.bm-cross-button {
+    height: 24px;
+    width: 24px;
+}
+
+/* Color/shape of close button cross */
+
+.bm-cross {
+    background: #bdc3c7;
+}
+
+/* General sidebar styles */
+
+.bm-menu {
+    background: #373a47;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+}
+
+/* Morph shape necessary with bubble or elastic */
+
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+/* Wrapper for item list */
+
+.bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+}
+
+/* Individual item */
+
+.bm-item {
+    display: inline-block;
+}
+
+/* Styling of overlay */
+
+.bm-overlay {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    text-shadow: 0px 1px 2px rgb(206, 203, 203);
+    color: #222;
+}
+
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    left: 36px;
+    top: 36px;
+}
+
+.right .bm-burger-button {
+    left: initial;
+    right: 36px;
+}
+
+.bm-burger-bars {
+    background: #373a47;
+}
+
+.bm-morph-shape {
+    fill: #373a47;
+}
+
+.bm-menu {
+    background: #373a47;
+    a {
+        color: #b8b7ad;
+        &:hover,
+        &:focus {
+            color: #c94e50;
+        }
+    }
+}
+
+.bm-item-list a {
+    padding: 0.8em;
+    span {
+        margin-left: 10px;
+        font-weight: 700;
+    }
+}
+
+.bg-footer {
+    background-color: rgb(205, 230, 254);
+    height: 20rem;
+    border-top: 30px, solid, black;
+    outline: #373a47, solid, 5px;
+}
+
+.sticky {
+    padding-left: 80%;
+    padding-top: 0.5em;
+    width: 100%;
+    height: 3em;
+    background-color: rgba(78, 74, 70, 0.3);
+    a {
+        text-decoration: none;
+        h3 {
+            font-size: 1.5em;
+        }
+    }
+}
+
+.login {
+    position: absolute;
+    right: 4rem;
+    top: 1.2rem;
+    font-size: 2rem;
+}
+
+.login a:hover {
+    text-decoration: none;
+}
