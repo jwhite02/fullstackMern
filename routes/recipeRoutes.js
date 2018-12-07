@@ -25,7 +25,10 @@ module.exports = app => {
 
           if (found || null) {
             res.send(doc);
-          } else{
+          } else if (req.body.cheeseUrl == null){
+              res.send(doc);
+          } 
+          else{
               doc.cheeseUrl.push(req.body.cheeseUrl);
               doc.save();
               res.send(doc);
