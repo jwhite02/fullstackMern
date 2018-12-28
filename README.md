@@ -1,6 +1,6 @@
 # Full Stack MERN
 
 
-This application uses Express, MongoDB, ReactJS, and Node
+### An application that combines Express, MongoDB, ReactJS, and Node
 ***
-App configure a full stack MERN architecture
+App use the full stack MERN architecture
