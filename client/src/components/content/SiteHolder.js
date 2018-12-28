@@ -14,6 +14,7 @@ import FooterSection from '../footer/FooterSection';
 import CategoryRoute from './CategoryRoute';
 import ArticleContainer from './ArticleContainer';
 import UserInfo from './UserInfo';
+import SavedRecipes from '../private/SavedRecipes';
 import * as actions from '../../actions';
 
 const routes =[
@@ -45,7 +46,7 @@ const routes =[
 class SiteHolder extends Component {
 
     componentDidMount() {
-       // this.props.fetchUser();
+        this.props.fetchUser();
     }
     
     render() {
@@ -84,6 +85,7 @@ class SiteHolder extends Component {
                             <Route  path="/category/:category" render={(...props) => {return <CategoryRoute />}}/>
                             <Route path="/recipe/:uritag" render={(props) => (<div>  <ArticleContainer isHeader={true} location={this.props.location} /> <FooterSection /> </div>)} />
                             <Route path="/usersinfo" component={UserInfo} />
+                            <Route path="/savedrecipes" component={SavedRecipes} />
                         </div>                             
                     </div>
                 </div>

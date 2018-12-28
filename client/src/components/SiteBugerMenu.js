@@ -5,10 +5,8 @@ import SiteHolder from './content/SiteHolder';
 class SiteBugerMenu extends Component {
     render() {
         return (
-            <React.Fragment>
-                
-                <SiteHolder />
-               
+            <React.Fragment> 
+                <SiteHolder />  
             </React.Fragment>
         );
     }

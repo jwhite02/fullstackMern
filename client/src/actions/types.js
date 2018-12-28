@@ -1,5 +1,5 @@
 export const CHOOSE_CATEGORY = "CHOOSE_CATEGORY";
-export const FETCH_USER = "FETCHUSER";
+export const FETCH_USER = "FETCH_USER";
 export const LOAD = "LOAD";
 export const FETCH_RECIPES_URIS = "FETCH_RECIPES_URIS";
 export const POST_RECIPE_URI = "POST_RECIPE_URI";

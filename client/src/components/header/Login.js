@@ -5,8 +5,8 @@ class Login extends Component {
 
 
     renderContent = () => {
-        console.log(this.props.auth);
-        switch (this.props.auth) {
+        console.log(this.props.authReducer.googleId);
+        switch (this.props.authReducer) {
             case null:
                 return("Still Deciding")
             case false:
@@ -18,7 +18,7 @@ class Login extends Component {
             default:
                 return(
                     <div className="login">
-                        <a href="http://localhost:5000/api/logout">Logout</a>
+                        <a href="/api/logout">Logout</a>
                     </div>
                 )  
         }
@@ -35,7 +35,7 @@ class Login extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        auth: state.auth
+        authReducer: state.authReducer
     }
 }
 

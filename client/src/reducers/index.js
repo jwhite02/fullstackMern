@@ -8,7 +8,7 @@ import  recipeuri  from './recipeuriReducer';
 // removed 'history' parameter from the argument
 const rootReducer = (history) => combineReducers({
     cheesecake,
-    auth: authReducer,
+    authReducer: authReducer,
     recipeuri,
     form: reduxFormReducer,
     router: connectRouter(history)

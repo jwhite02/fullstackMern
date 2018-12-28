@@ -15,12 +15,20 @@ import rootReducer from '../src/reducers';
 const history = createBrowserHistory();
 console.log(history);
 
+// const storePreloadedState = {
+//   cheesecake: [],
+//   authReducer: {},
+//   recipeuri: {},
+//   form: {},
+//   router: {}
+// }
+
 const store = createStore(
   rootReducer(history),
   {},
-  compose(applyMiddleware(routerMiddleware(history), reduxThunk))
+  compose(applyMiddleware(routerMiddleware(history), reduxThunk), window.devToolsExtention ? window.devToolsExtention() : f => f)
 );
-//console.log('store.getState()', store.getState());
+console.log('store.getState()', store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
